@@ -7,6 +7,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontend", "Frontend", "{39
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularWebsite", "AngularWebsite\AngularWebsite.csproj", "{2B8D79CD-D50C-429C-8854-759F37C0F6B2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Backend", "Backend", "{4DCB9FE7-C23D-4F6A-9466-4C5EF8C83F48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItemsApi", "ItemsApi\ItemsApi.csproj", "{7CD54A91-91C0-4243-B94A-8A8C9CB1BB18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapesApi", "ShapesApi\ShapesApi.csproj", "{D5F99A93-F50B-4441-A9FB-8E1BE75B0703}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +23,22 @@ Global
 		{2B8D79CD-D50C-429C-8854-759F37C0F6B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B8D79CD-D50C-429C-8854-759F37C0F6B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B8D79CD-D50C-429C-8854-759F37C0F6B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CD54A91-91C0-4243-B94A-8A8C9CB1BB18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CD54A91-91C0-4243-B94A-8A8C9CB1BB18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CD54A91-91C0-4243-B94A-8A8C9CB1BB18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CD54A91-91C0-4243-B94A-8A8C9CB1BB18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5F99A93-F50B-4441-A9FB-8E1BE75B0703}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5F99A93-F50B-4441-A9FB-8E1BE75B0703}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5F99A93-F50B-4441-A9FB-8E1BE75B0703}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5F99A93-F50B-4441-A9FB-8E1BE75B0703}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{2B8D79CD-D50C-429C-8854-759F37C0F6B2} = {392A8B4B-1550-4654-A9D1-B407D2A67E14}
+		{7CD54A91-91C0-4243-B94A-8A8C9CB1BB18} = {4DCB9FE7-C23D-4F6A-9466-4C5EF8C83F48}
+		{D5F99A93-F50B-4441-A9FB-8E1BE75B0703} = {4DCB9FE7-C23D-4F6A-9466-4C5EF8C83F48}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {625FA024-F379-4C85-9362-1AD83B7B3C87}
