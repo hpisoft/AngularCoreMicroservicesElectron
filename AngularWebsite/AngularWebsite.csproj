@@ -72,6 +72,7 @@
     <Content Include=".angular-cli.json" />
     <Content Include=".editorconfig" />
     <Content Include="e2e\tsconfig.e2e.json" />
+    <Content Include="main.js" />
     <Content Include="package.json" />
     <None Include="packages.config" />
     <Content Include="src\assets\.gitkeep" />
