@@ -23,6 +23,8 @@
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
     "core-js": "^2.4.1",
+    "dotenv": "^4.0.0",
+    "portfinder": "^1.0.13",
     "rxjs": "^5.4.1",
     "zone.js": "^0.8.14"
   },

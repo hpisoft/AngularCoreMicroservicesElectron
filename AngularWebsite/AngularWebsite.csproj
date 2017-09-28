@@ -74,8 +74,11 @@
     <Content Include="e2e\tsconfig.e2e.json" />
     <Content Include="main.js" />
     <Content Include="package.json" />
+    <Content Include=".env" />
     <None Include="packages.config" />
+    <Content Include="src\apiError.html" />
     <Content Include="src\assets\.gitkeep" />
+    <Content Include="src\portError.html" />
     <Content Include="src\tsconfig.app.json" />
     <Content Include="src\tsconfig.spec.json" />
     <Content Include="tsconfig.json" />
