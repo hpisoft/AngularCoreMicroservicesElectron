@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { BackendEndpointsService } from './shared/backend-endpoints.service';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -12,7 +14,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [BackendEndpointsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

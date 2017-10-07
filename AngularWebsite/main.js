@@ -16,6 +16,13 @@ app.on('ready', startup);
 app.on('activate', recreateWindowAndApiIfEmpty);
 app.on('window-all-closed', quitApplication);
 
+ipcMain.on('GetPort', function (event, arg) {
+    if (launchedApis.hasOwnProperty(arg))
+        event.returnValue = launchedApis[arg].port;
+    else
+        console.error(arg + " does not exist in electron exception");
+});
+
 function recreateWindowAndApiIfEmpty() {
     if (win === null)
         startup();

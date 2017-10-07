@@ -4,5 +4,15 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+    production: false,
+    apis: {
+        itemsApi: {
+            host: "http://localhost",
+            port: 50842
+        },
+        shapesApi: {
+            host: "http://localhost",
+            port: 51012
+        }
+    }
 };
