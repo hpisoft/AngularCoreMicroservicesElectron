@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Microsoft.Extensions.Primitives;
 
 namespace ItemsApi
 {
@@ -33,6 +34,17 @@ namespace ItemsApi
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.Use(async (context, next) =>
+            {
+                if (context.Request.Headers.TryGetValue("Origin", out StringValues origins))
+                {
+                    var localhostOrigins = origins.Where(origin => origin.StartsWith("http://localhost", StringComparison.OrdinalIgnoreCase));
+                    context.Response.Headers.Add("Access-Control-Allow-Origin", localhostOrigins.ToArray());
+                }
+
+                await next();
+            });
 
             app.UseMvc();
         }
