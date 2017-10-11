@@ -110,6 +110,8 @@
     <TypeScriptCompile Include="src\app\app.component.spec.ts" />
     <TypeScriptCompile Include="src\app\app.component.ts" />
     <TypeScriptCompile Include="src\app\app.module.ts" />
+    <TypeScriptCompile Include="src\app\shapes.service.spec.ts" />
+    <TypeScriptCompile Include="src\app\shapes.service.ts" />
     <TypeScriptCompile Include="src\app\shared\backend-endpoints.service.spec.ts" />
     <TypeScriptCompile Include="src\app\shared\backend-endpoints.service.ts" />
     <TypeScriptCompile Include="src\environments\environment.prod.ts" />
