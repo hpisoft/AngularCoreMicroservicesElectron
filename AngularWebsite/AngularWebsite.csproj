@@ -72,6 +72,7 @@
     <Content Include=".angular-cli.json" />
     <Content Include=".editorconfig" />
     <Content Include="e2e\tsconfig.e2e.json" />
+    <Content Include="karma.globals.js" />
     <Content Include="main.js" />
     <Content Include="package.json" />
     <Content Include=".env" />

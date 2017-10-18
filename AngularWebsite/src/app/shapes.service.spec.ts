@@ -1,11 +1,15 @@
 import { TestBed, inject } from '@angular/core/testing';
 
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+
 import { ShapesService } from './shapes.service';
+import { BackendEndpointsService } from './shared/backend-endpoints.service';
 
 describe('ShapesService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [ShapesService]
+        providers: [ShapesService, BackendEndpointsService],
+        imports: [HttpClientTestingModule]
     });
   });
 
