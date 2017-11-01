@@ -3,12 +3,18 @@ const { execFile } = require('child_process');
 const path = require('path');
 const url = require('url');
 const portfinder = require('portfinder');
+const ApiStatusesChecker = require('./apiStatusesChecker');
 
 require('dotenv').config();
+
+const API_STATUS_CHECK_MAX_RETRIES = 5;
+const API_STATUS_CHECK_INTERVAL_IN_MS = 1000;
 
 let win = null;
 let apis = [];
 let launchedApis = {};
+
+let apiStatusTests = 0;
 
 let apiProcessLoadingError = false;
 
@@ -104,7 +110,7 @@ function startApiAndLoadContent(api, port) {
     startApi(api, port);
 
     if (areAllApisStarted())
-        loadContent();
+        waitAllApisStatusOKAndLoadContent();
 }
 
 function startApi(api, port) {
@@ -131,6 +137,24 @@ function buildApiArguments(apiFilePath, port) {
 
 function areAllApisStarted() {
     return apis.length === Object.keys(launchedApis).length;
+}
+
+function waitAllApisStatusOKAndLoadContent() {
+    if (apiStatusTests == API_STATUS_CHECK_MAX_RETRIES) {
+        handleApiLoadingError(`Not all APIs returned OK status after ${apiStatusTests} retries`);
+        return;
+    }
+
+    apiStatusTests++;
+
+    new ApiStatusesChecker(launchedApis)
+        .checkAllApisStatusOK()
+        .then(loadContent)
+        .catch(invokeWaitAllApisStatusOKWithTimeout);
+}
+
+function invokeWaitAllApisStatusOKWithTimeout() {
+    setTimeout(waitAllApisStatusOKAndLoadContent, API_STATUS_CHECK_INTERVAL_IN_MS);
 }
 
 function loadErrorFindingFreePortPage(error) {
