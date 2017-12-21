@@ -179,6 +179,9 @@ function loadContent() {
 }
 
 function loadWindowContentFromFile(filePath) {
+    if (win === null)
+        return;
+
     win.loadURL(url.format({
         pathname: path.join(__dirname, filePath),
         protocol: 'file:',
@@ -187,6 +190,9 @@ function loadWindowContentFromFile(filePath) {
 }
 
 function loadWindowContentFromHttpAddress(url) {
+    if (win === null)
+        return;
+
     win.loadURL(url);
 }
 
