@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <OutputPath>..\apps\ShapesApi</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
